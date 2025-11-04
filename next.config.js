@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  output: 'export',
+  basePath: process.env.NODE_ENV === 'production' ? '/github-roast' : '',
   images: {
-    domains: ['avatars.githubusercontent.com'],
+    unoptimized: true,
   },
 }
 
